@@ -1,34 +1,28 @@
+# adelyce_backend_coding_test
 
-## Development server
+## Sujet
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Réalisation d’une application permettant de créer une liste de course alimentaire « partagée » : chaque utilisateur, lorsqu’il se connecte (s’il possède un compte) accède à sa liste de course à laquelle il peut ajouter des éléments et peut également partager un élément de cette liste avec un autre utilisateur en l’ajoutant à sa liste.
 
-## Json server
+## Pré-requis
 
+- Possibilité de créer un compte utilisateur et de se connecter avec son compte créé
+- Possibilité d’ajouter, éditer, supprimer un élément à sa liste de course
+- Possibilité de visualiser sa liste de course
+- Possibilité de partager/annuler le partage d’un élément de sa liste de course avec un autre utilisateur,
+- Possibilité de visualiser les éléments qu’un utilisateur a partagé avec vous en lecture uniquement (donner la possibilité d’identifier visuellement qu’il s’agit d’un élément partagé)
 
+## Stack technique
+- Back: Symfony (sans API Plateform)
+- Front: Angular
+- BDD: MariaDB
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## serve a Build
-
-$ npm i -g serve
-$ cd dist/product-trial
-\$ serve
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Procédure d'installation et d'exécution du projet en local sur windows
+1. Cloner le [projet git](https://github.com/abonnin37/adelyce_frontend_coding_test) sur votre pc grâce à `git clone`.
+2. Se positionner à la racine du projet et exécuter la commande `npm install`.
+3. S'il y a besoin, exécuter les commandes `npm audit fix` et `npm audit fix --force`.
+4. Exécuter la commande `npm run start` pour lancer le serveur.
+5. Rendez-vous à l'adresse suivante pour utiliser l'application web : http://localhost:4201/
+   1. Vous pouvez vous connecter avec les identifiants suivants :
+      1. test@user.com / password
+      2. test@admin.com / password
