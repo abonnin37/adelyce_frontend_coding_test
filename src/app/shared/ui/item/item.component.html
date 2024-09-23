@@ -1,0 +1,16 @@
+<div class="item-container">
+  <div class="item-name">
+    {{ item.name }}
+  </div>
+  <div class="actions">
+    <button class="share-button" mat-icon-button matBadgeSize="small" matBadge="{{ item.users.length }}" [matBadgeHidden]="item.users.length === 0" (click)="shareItem(item)">
+      <mat-icon>share</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="editItem(item)">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button color="warn" (click)="deleteItem(item)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

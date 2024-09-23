@@ -1,0 +1,17 @@
+<mat-card>
+  <p>Liste des utilisateurs qui peuvent voir votre élément :</p>
+  <mat-list>
+    <mat-list-item *ngFor="let user of item.users">
+      <div class="row-container">
+        <div class="user-name">
+          {{ user.email }}
+        </div>
+        <div class="button-delete">
+          <button mat-icon-button color="warn" (click)="cancelShareUser(user)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

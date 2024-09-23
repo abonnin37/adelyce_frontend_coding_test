@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Partager l'élément</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Select an item</mat-label>
+    <mat-select [(value)]="selectedItem" (selectionChange)="onSelectionChange($event)">
+      <mat-option *ngFor="let user of users" [value]="user">
+        {{ user.email }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<app-shared-user-list *ngIf="item?.users?.length > 0" [item]="item"></app-shared-user-list>
+<div mat-dialog-actions>
+  <button mat-button (click)="closeRegistrationDialog()">Annuler</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Enregistrer</button>
+</div>
